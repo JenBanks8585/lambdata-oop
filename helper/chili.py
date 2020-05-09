@@ -1,5 +1,6 @@
 from menu import *
 
+
 class Chili(Menu):
         
     def __init__(self, name, price, calory, pasta, cheese):
@@ -7,7 +8,9 @@ class Chili(Menu):
 
     # function describing chili type, price and calories
     def chili_type(self):
-        return '{} {} {} {} {}'. format(self.name, '$', self.price, self.calory, 'cal')
+        return '{} {} {} {} {}'. format(self.name,
+                                        '$', self.price, 
+                                        self.calory, 'cal')
             
     # function whether it has cheese or not  
     def with_cheese(self):
