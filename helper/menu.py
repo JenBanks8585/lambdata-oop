@@ -1,4 +1,7 @@
-
+"""
+class Menu 
+        name, price, calory
+"""
 
 class Menu:
 
@@ -12,6 +15,10 @@ class Menu:
         self.calory = calory
 
         Menu.num_of_products += 1
+
+"""
+class Burger inherits Menu attributes and class variables.
+"""
 
 class Burger(Menu):
     
@@ -36,6 +43,10 @@ class Burger(Menu):
     def apply_discount(self):
         self.price= float(self.price * self.discount)
         return '{} {}'. format('Discounted price is: $', self.price) 
+
+"""
+class Chili inherits Menu attributes and class variables.
+"""
 
 class Chili(Menu):
         
@@ -64,6 +75,7 @@ class Chili(Menu):
         else:
             return "This chili does NOT have pasta"
 
+"""
 #Chili Instances
 c1 = Chili('Chili Mac', 4.49, 1200, True, False)
 c2 = Chili('Chili Mac Supreme', 4.99, 1410, True, True)
@@ -90,3 +102,4 @@ print (c1.chili_type())
 print (c2.with_cheese())
 print(c2.price)
 print (c3.with_cheese())
+"""
