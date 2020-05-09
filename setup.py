@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 setup(
     name="Order", # the name that you will install via pip
-    version="1.1.1",
+    version="1.1.2",
     author="Jen Banks",
     author_email="jenniferbanks8585@gmail.com(opens in new tab)",
     description="Steak & Shake order helper",

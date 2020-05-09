@@ -1,4 +1,4 @@
-from menu import Menu
+""" from menu import Menu
 
 
 class Burger(Menu):
@@ -38,4 +38,4 @@ print (b1.with_lettuce())
 print(b2.price)
 print (b2.apply_discount())
 print (Menu.num_of_products)
-
+ """

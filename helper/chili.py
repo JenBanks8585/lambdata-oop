@@ -1,4 +1,4 @@
-from menu import Menu
+""" from menu import Menu
 
 
 class Chili(Menu):
@@ -41,4 +41,4 @@ print (c1.chili_type())
 print (c2.with_cheese())
 print(c2.price)
 print (Menu.num_of_products)
-print (c3.with_cheese())
+print (c3.with_cheese()) """
