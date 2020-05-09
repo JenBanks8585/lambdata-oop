@@ -2,7 +2,7 @@ from menu import Menu
 
 
 class Burger(Menu):
-
+    
     def __init__(self, name, price, calory, lettuce):
         super(). __init__(name, price, calory)
 
@@ -34,7 +34,8 @@ b5 = Burger('Frisco Melt n Fries', 5.49, 1200, False)
 
 # Sample results
 print (b1.burger_type())
-print (b3.with_lettuce())
+print (b1.with_lettuce())
 print(b2.price)
 print (b2.apply_discount())
 print (Menu.num_of_products)
+

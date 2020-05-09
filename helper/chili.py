@@ -38,7 +38,7 @@ c6 = Chili('Chili Deluxe', 4.99, 1000, False, False)
 
 # Sample results
 print (c1.chili_type())
-print (c3.with_cheese())
+print (c2.with_cheese())
 print(c2.price)
 print (Menu.num_of_products)
 print (c3.with_cheese())
