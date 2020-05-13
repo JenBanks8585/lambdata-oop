@@ -34,7 +34,7 @@ class Burger(Menu):
     # function whether it has lettuce or not  
     def with_lettuce(self):
         self.lettuce = True
-        if True:
+        if self. lettuce is True:
             return "This burger has lettuce"
         else:
             return "This burger does NOT have lettuce"
@@ -62,7 +62,7 @@ class Chili(Menu):
     # function whether it has cheese or not  
     def with_cheese(self):
         self.cheese = True
-        if True:
+        if self.cheese is True:
             return "This chili has cheese"
         else:
             return "This chili does NOT have cheese"
