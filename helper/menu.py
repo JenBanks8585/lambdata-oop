@@ -1,9 +1,8 @@
-
 class Menu:
 
-  """
+    """
 ## Steak N' Shake helpers with OOP
-    This is a subset of Steak N' Shake menu that covers 
+    This is a subset of Steak N' Shake menu that covers
         a. Burgers
         b. Chili
 
@@ -17,33 +16,33 @@ class Menu:
     Menu Methods:
         a. Add price of any two available items
            print(c1 + b2)
-        
+
         b. Number of Products available
            print (Menu.num_of_products)
-        
+
         c. Computes discounted price
            print (b2.apply_discount())
 """
 
-  # class variables
-  num_of_products = 0
-  discount = 0.95
+    # class variables
+    num_of_products = 0
+    discount = 0.95
 
-  def __init__(self, name, price, calory):
+    def __init__(self, name, price, calory):
         self.name = name
         self.price = price
         self.calory = calory
 
         Menu.num_of_products += 1
-    
-  # dunder method to add any two available items' prices
-  def __add__(self, other):
-      return self.price + other.price
+
+    # dunder method to add any two available items' prices
+    def __add__(self, other):
+        return self.price + other.price
 
 
 class Burger(Menu):
-  
-  """
+
+    """
 class Burger inherits Menu attributes and class variables.
 
  Burger Methods:
@@ -59,31 +58,30 @@ class Burger inherits Menu attributes and class variables.
         print(b2.name)
         print(b4.lettuce)
 """
-  
-  def __init__(self, name, price, calory, lettuce):
+
+    def __init__(self, name, price, calory, lettuce):
         super(). __init__(name, price, calory)
         self.lettuce = lettuce
 
     # function describing burger type, price and calories
-  def burger_type(self):
-        return '{} {} {} {} {}'. format(self.name,
-                                        '$', self.price, 
-                                        self.calory, 'cal')
+    def burger_type(self):
+        return '{} {} {} {} {}'. format(self.name, '$',
+                                        self.price, self.calory, 'cal')
 
     # function where potential discount can be applied
-  def apply_discount(self):
-        self.price= float(self.price * self.discount)
-        return '{} {}'. format('Discounted price is: $', self.price) 
+    def apply_discount(self):
+        self.price = float(self.price * self.discount)
+        return '{} {}'. format('Discounted price is: $', self.price)
 
 
 class Chili(Menu):
 
-  """
+    """
 class Chili inherits Menu attributes and class variables.
 
 Chili Methods:
     a. chili_type(self)
-        # function describing chili type, price, calories with or without cheese
+        # function describing chili type, price, calories, cheese content
 
     Sample results:
         print (c1.chili_type())
@@ -91,23 +89,21 @@ Chili Methods:
         print(c2.name)
         print(c4.cheese)
   """
-  
-  def __init__(self, name, price, calory, cheese):
+
+    def __init__(self, name, price, calory, cheese):
         super(). __init__(name, price, calory)
         self.cheese = cheese
 
     # function describing chili type, price and calories
-  def chili_type(self):
+    def chili_type(self):
         return '{} {} {} {} {}'. format(self.name,
-                                        '$', self.price, 
+                                        '$', self.price,
                                         self.calory, 'cal')
-        
-          
+
 if __name__ == "__main__":
 
-  def __add__(self, other):
-      return self.price + other.price
-   
+    def __add__(self, other):
+        return self.price + other.price
 
 """ #Chili Instances
   c1 = Chili('Chili Mac', 4.49, 1200, 'With Cheese')
@@ -124,7 +120,7 @@ if __name__ == "__main__":
   b4 = Burger('Triple Steakburger n Fries', 3.99, 850, 'No Lettuce')
   b5 = Burger('Frisco Melt n Fries', 5.49, 1200, 'With Lettuce')
 
-  
+
   # Sample results
   print (b1.burger_type())
   print(b2.price)
