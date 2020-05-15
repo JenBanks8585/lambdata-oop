@@ -73,6 +73,13 @@ class Burger inherits Menu attributes and class variables.
         self.price = float(self.price * self.discount)
         return '{} {}'. format('Discounted price is: $', self.price)
 
+    # Function whether it has lettuce or not
+    def with_lettuce(self):
+      if self.lettuce is True:
+        return "This burger has lettuce."
+      else:
+        return "This burger does not have lettuce."
+
 
 class Chili(Menu):
 
@@ -114,11 +121,11 @@ if __name__ == "__main__":
   c6 = Chili('Chili Deluxe', 4.99, 1000, 'With Cheese')
 
 # Burger instances
-  b1 = Burger('Pork Belly Double', 6.49, 740, 'With Lettuce')
-  b2 = Burger('Original Double n Cheese', 3.99, 770, 'With Lettuce')
-  b3 = Burger('Single n Cheese', 3.79, 630, 'No Lettuce')
-  b4 = Burger('Triple Steakburger n Fries', 3.99, 850, 'No Lettuce')
-  b5 = Burger('Frisco Melt n Fries', 5.49, 1200, 'With Lettuce')
+  b1 = Burger('Pork Belly Double', 6.49, 740, True)
+  b2 = Burger('Original Double n Cheese', 3.99, 770, True)
+  b3 = Burger('Single n Cheese', 3.79, 630, False)
+  b4 = Burger('Triple Steakburger n Fries', 3.99, 850, False)
+  b5 = Burger('Frisco Melt n Fries', 5.49, 1200, True)
 
 
   # Sample results
